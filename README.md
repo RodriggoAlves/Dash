@@ -12,7 +12,7 @@ Aqui está uma captura de tela da aplicação
 
 ## Descrição
 
-Este Dashboard é construído usando [Custom TKinter](https://github.com/TomSchimansky/CustomTkinter) para visualização de dados em Python. Ele fornece uma interface amigável para analisar e visualizar dados de [descrição do seu projeto].
+Este Dashboard é construído usando [Custom TKinter](https://github.com/TomSchimansky/CustomTkinter) para visualização de dados em Python. Ele fornece uma interface amigável para analisar e visualizar dados da [Rotina de um usúario].
 
 ## Requisitos
 
