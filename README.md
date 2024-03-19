@@ -4,13 +4,15 @@ Este é um projeto de Dashboard desenvolvido em Python.
 
 ## Aplicação
 
-Aqui está uma captura de tela da aplicação:
+Aqui está uma captura de tela da aplicação com uma borda de 30px:
 
-![Dashboard](Image/Dashboard.png)
+<div style="border: 30px solid #ccc; padding: 5px;">
+  <img src="Image/Dashboard.png" alt="Dashboard" />
+</div>
 
 ## Descrição
 
-Este Dashboard é construído usando [biblioteca X](link_para_a_biblioteca_x) para visualização de dados em Python. Ele fornece uma interface amigável para analisar e visualizar dados de [descrição do seu projeto].
+Este Dashboard é construído usando [Custom TKinter](https://github.com/TomSchimansky/CustomTkinter) para visualização de dados em Python. Ele fornece uma interface amigável para analisar e visualizar dados de [descrição do seu projeto].
 
 ## Requisitos
 
@@ -21,14 +23,12 @@ Este Dashboard é construído usando [biblioteca X](link_para_a_biblioteca_x) pa
   - [Datetime](https://docs.python.org/3/library/datetime.html)
   - [Time](https://docs.python.org/3/library/time.html)
   - [Wrbbroswer](https://docs.python.org/3/library/webbrowser.html)
-  - 
-  - ...
 
 ## Instalação
 
 1. Clone este repositório:
     ```bash
-    git clone https://github.com/seu-usuario/seu-projeto.git
+    git clone https://github.com/RodriggoAlves/Dash.git
     ```
 
 2. Instale as dependências:
@@ -39,6 +39,3 @@ Este Dashboard é construído usando [biblioteca X](link_para_a_biblioteca_x) pa
 ## Utilização
 
 Execute o arquivo principal do Dashboard:
-
-```bash
-python main.py
