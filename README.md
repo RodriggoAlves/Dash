@@ -4,7 +4,7 @@ Este é um projeto de Dashboard desenvolvido em Python.
 
 ## Aplicação
 
-Aqui está uma captura de tela da aplicação com uma borda de 30px:
+Aqui está uma captura de tela da aplicação 
 
 <div style="border: 30px solid #ccc; padding: 5px;">
   <img src="Image/Dashboard.png" alt="Dashboard" />
