@@ -1,6 +1,6 @@
 import customtkinter as ctk
 from tkinter import*
-import datetime as dt
+from datetime import datetime as dt
 import time
 import webbrowser
 
@@ -104,15 +104,23 @@ def Dashboard():
 
     # botão que mostra a Data 
     
-    Calendarimage = PhotoImage(file='C:\\Users\\rodri\\OneDrive\\Desktop\\Dash\\Image\\CalendarImage.png')
+    def MostrarData():
+        data = dt.now()
+        DataDayYears = data.strftime("%d/%m/%y")
+        Calendarimage = PhotoImage(file='C:\\Users\\rodri\\OneDrive\\Desktop\\Dash\\Image\\CalendarImage.png')
 
-    ButtonEconomy = ctk.CTkButton(master=Mydashboard,image=Calendarimage,
+        ButtonCalendar = ctk.CTkButton(master=Mydashboard,image=Calendarimage,
                                   width=240,height=58,
-                                  text='  18/03/2024',text_color=Black,font=('Poppins',25,'bold'),
+                                  text=DataDayYears,text_color=Black,
+                                  font=('Poppins',25,'bold'),
                                   corner_radius=12,border_color=Black,border_width=2,
                                   fg_color=White,bg_color=White,
                                   hover=White)
-    ButtonEconomy.place(x=738,y=123)
+        ButtonCalendar.place(x=738,y=123)
+        Mydashboard.after(10000,MostrarData)
+
+    MostrarData()
+    
 
 
 
@@ -229,16 +237,26 @@ def Dashboard():
     
     # Mostrar hora na tela 
 
-    texthoras = ctk.CTkLabel(master=Mydashboard,
+    def MostrarHoras():
+        horas = dt.now()
+        horascomseconds = horas.strftime("%H:%M:%S")
+
+        texthoras = ctk.CTkLabel(master=Mydashboard,
                              width=66,height=30,
                              fg_color=White,bg_color=White,
-                             text='18:30',font=('Poppins',25,'normal'),text_color=Black)
-    texthoras.place(x=1244,y=20)
+                             text=horascomseconds,font=('Poppins',25,'normal'),text_color=Black)
+        texthoras.place(x=1200,y=20)
+
+        Mydashboard.after(1000,MostrarHoras)
+        
+    MostrarHoras()
+    
 
 
     # Mostrar o calendario na tela
 
     Calendarrightimage = PhotoImage(file='C:\\Users\\rodri\\OneDrive\\Desktop\\Dash\\Image\\CalendarrigthImage.png')
+
 
     calendartight = ctk.CTkLabel(master=Mydashboard,
                                  width=237,height=191,
