@@ -7,7 +7,7 @@ Este é um projeto de Dashboard desenvolvido em Python.
 Aqui está uma captura de tela da aplicação 
 
 <div style="border: 30px solid #ccc; padding: 5px;">
-  <img src="Image/Dashboard.png" alt="Dashboard" />
+  <img src="Image/Dashboard1.png" alt="Dashboard" />
 </div>
 
 ## Descrição
