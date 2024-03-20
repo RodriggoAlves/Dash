@@ -12,7 +12,7 @@ Aqui está uma captura de tela da aplicação
 
 ## Descrição
 
-Este Dashboard é construído usando [Custom TKinter](https://github.com/TomSchimansky/CustomTkinter) para visualização de dados em Python. Ele fornece uma interface amigável para analisar e visualizar dados da [Rotina de um usúario].
+Este Dashboard é construído usando [Custom TKinter](https://github.com/TomSchimansky/CustomTkinter) para visualização de dados em Python. Ele fornece uma interface amigável para analisar e visualizar dados da Rotina de um usúario.
 
 ## Requisitos
 
@@ -22,7 +22,7 @@ Este Dashboard é construído usando [Custom TKinter](https://github.com/TomSchi
   - [Tkinter](https://docs.python.org/pt-br/3/library/tkinter.html)
   - [Datetime](https://docs.python.org/3/library/datetime.html)
   - [Time](https://docs.python.org/3/library/time.html)
-  - [Wrbbroswer](https://docs.python.org/3/library/webbrowser.html)
+  - [Webbroswer](https://docs.python.org/3/library/webbrowser.html)
 
 ## Instalação
 
