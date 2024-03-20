@@ -5,7 +5,7 @@ Este é um projeto de Dashboard desenvolvido em Python.
 ## Aplicação
 
 Aqui está uma captura de tela da aplicação 
-
+![Dashboard](Image/Dashboard.png)
 <div style="border: 30px solid #ccc; padding: 5px;">
   <img src="Image/Dashboard1.png" alt="Dashboard" />
 </div>
