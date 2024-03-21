@@ -56,25 +56,71 @@ def Dashboard():
     # Botão no final de sair 
 
     # Imagem de Log Out
-    ButtonLogOutImage = PhotoImage(file='C:\\Users\\rodri\\OneDrive\\Desktop\\Dash\\Image\\LogOutImage.png')
+    ButtonLogOutImage = PhotoImage(file='Image/LogOutImage.png')
     
     #Função de sair do Dashboard
-    def Logout():
-        Mydashboard.destroy()
+    def LogOut():
+        Logout = ctk.CTk()
+        Logout.geometry("400x200")
+        Logout.title('Close')
+        Logout.config(bg=White)
+        Logout.resizable(False,False)
+
+
+        MensagemSair = ctk.CTkLabel(master=Logout,
+                                    text='Tem certeza \nque deseja sair?',
+                                    font=('Poppins',20,'normal'),
+                                    text_color=Purple,
+                                    fg_color=White,
+                                    )
+        MensagemSair.place(x=116,y=48)
+
+        # Botão para confirmar se quer sair 
+
+        def Close():
+            Mydashboard.destroy()
+            Logout.destroy()
+
+        buttonSim = ctk.CTkButton(master=Logout,
+                                width=67,height=26,
+                                fg_color=White,bg_color=White,
+                                text='Sim',text_color=Black,
+                                font=('Poppins',18,'normal'),
+                                corner_radius=12,border_width=1,border_color=Purple,
+                                hover_color=Purple,command=Close)
+        buttonSim.place(x=116,y=124)
+
+        def ContinueOpen():
+            Logout.destroy()
+
+        buttonNão = ctk.CTkButton(master=Logout,
+                                width=67,height=26,
+                                fg_color=White,bg_color=White,
+                                text='Não',text_color=Black,
+                                font=('Poppins',18,'normal'),
+                                corner_radius=12,border_width=1,border_color=Purple,
+                                hover_color=Purple,command=ContinueOpen)
+        buttonNão.place(x=200,y=124)
+
+
+
+
+        Logout.mainloop()
+
 
     # Botão de sair
     ButtonLogOut = ctk.CTkButton(master=Mydashboard,
                                  width=42,height=42,
                                  image=ButtonLogOutImage,
                                  text='',hover_color=Purplehover,fg_color=Purple,bg_color=Purple,
-                                 command=Logout)
+                                 command=LogOut)
     ButtonLogOut.place(x=120,y=634)
 
 
 
     # A Imagem do usuario 
 
-    UserImage = PhotoImage(file='C:\\Users\\rodri\\OneDrive\\Desktop\\Dash\\Image\\UserImage.png')
+    UserImage = PhotoImage(file='Image/UserImage.png')
 
     Userimageprofile = ctk.CTkLabel(master=Mydashboard,
                                     width=160,height=162,
@@ -91,7 +137,7 @@ def Dashboard():
 
     # botão de saldo 
 
-    Economyimage = PhotoImage(file='C:\\Users\\rodri\\OneDrive\\Desktop\\Dash\\Image\\MoneyImage.png')
+    Economyimage = PhotoImage(file='Image/MoneyImage.png')
 
     ButtonEconomy = ctk.CTkButton(master=Mydashboard,image=Economyimage,
                                   width=240,height=58,
@@ -107,8 +153,7 @@ def Dashboard():
     def MostrarData():
         data = dt.now()
         DataDayYears = data.strftime("%d/%m/%y")
-        Calendarimage = PhotoImage(file='C:\\Users\\rodri\\OneDrive\\Desktop\\Dash\\Image\\CalendarImage.png')
-
+        Calendarimage = PhotoImage(file='Image/CalendarImage.png')
         ButtonCalendar = ctk.CTkButton(master=Mydashboard,image=Calendarimage,
                                   width=240,height=58,
                                   text=DataDayYears,text_color=Black,
@@ -179,8 +224,7 @@ def Dashboard():
 
     # Função do Botão do instagram 
 
-    InstagramImage = PhotoImage(file='C:\\Users\\rodri\\OneDrive\\Desktop\\Dash\\Image\\InstagramImage.png')
-
+    InstagramImage = PhotoImage(file='Image/InstagramImage.png')
     def LinkInstagram():
         urlinstagram = 'https://www.instagram.com/rodriggo.sx'
         webbrowser.open_new(urlinstagram)
@@ -197,8 +241,7 @@ def Dashboard():
 
     # Função do botão do YouTube
 
-    InstagramImage = PhotoImage(file='C:\\Users\\rodri\\OneDrive\\Desktop\\Dash\\Image\\YoutubeImage.png')
-
+    InstagramImage = PhotoImage(file='Image/YoutubeImage.png')
     def LinkYouTube():
         urlYouTube = 'https://www.youtube.com/@rzndmodder'
         webbrowser.open_new(urlYouTube)
@@ -215,7 +258,7 @@ def Dashboard():
 
     # Função do botão do WhatsApp
 
-    WhatsAppImage = PhotoImage(file='C:\\Users\\rodri\\OneDrive\\Desktop\\Dash\\Image\\WhatsappImage.png')
+    WhatsAppImage = PhotoImage(file='Image/WhatsappImage.png')
 
     def LinkWhatsApp():
         urlWhatsApp = 'https://wa.me/5562981917921'
@@ -255,8 +298,7 @@ def Dashboard():
 
     # Mostrar o calendario na tela
 
-    Calendarrightimage = PhotoImage(file='C:\\Users\\rodri\\OneDrive\\Desktop\\Dash\\Image\\CalendarrigthImage.png')
-
+    Calendarrightimage = PhotoImage(file='Image/CalendarrigthImage.png')
 
     calendartight = ctk.CTkLabel(master=Mydashboard,
                                  width=237,height=191,
