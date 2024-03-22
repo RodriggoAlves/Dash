@@ -4,7 +4,7 @@
 
 #### Criamos Aqui a nossa tela principal do Dashboard
 
-![[Tela.png]]
+![Dashboard](codeDocumentation/imageCode/Tela.png)
 ***
 # Frame Roxo da Esquerda
 
