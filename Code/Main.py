@@ -25,10 +25,6 @@ def Dashboard():
 
 
 
-
-
-
-
     # Esse e o frame roxo atrás do menu
 
     Framemenu = ctk.CTkFrame(master=Mydashboard,
