@@ -148,7 +148,7 @@ def Dashboard():
     
     def MostrarData():
         data = dt.now()
-        DataDayYears = data.strftime("%d/%m/%y")
+        DataDayYears = data.strftime("%d/%m/%y  ")
         Calendarimage = PhotoImage(file='Image/CalendarImage.png')
         ButtonCalendar = ctk.CTkButton(master=Mydashboard,image=Calendarimage,
                                   width=240,height=58,
