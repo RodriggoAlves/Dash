@@ -13,77 +13,12 @@ Purplehover = '#4C22A5'
 macos = "#D1CDD1"
 # Teste
 
-def dinheiro():
-        money = ctk.CTk()
-        money.geometry("850x500")
-        money.config(bg=White)
-
-        nameUser = ctk.CTkLabel(
-                                    master=money,
-                                    width=260,
-                                    height=29,
-                                    text='Olá Rodriggo',
-                                    font=('Poppins',40,'normal'),
-                                    text_color=Purple,
-                                    fg_color=White,
-                                    bg_color=White
-                                            )
-        nameUser.place(x=295,y=100)
-
-        addMoney = ctk.CTkEntry(
-                                    master=money,
-                                    width=344,
-                                    height=51,
-                                    fg_color=White,
-                                    bg_color=White,
-                                    corner_radius=12,
-                                    border_color=Purple,
-                                    border_width=1,
-                                    placeholder_text="R$   Adicione um saldo...",
-                                    font=("Poppins",24,"normal"),
-                                    text_color=Purple
-                                            )
-        addMoney.place(x=253,y=199)
-
-        addMoney = ctk.CTkEntry(
-                                    master=money,
-                                    width=344,
-                                    height=51,
-                                    fg_color=White,
-                                    bg_color=White,
-                                    corner_radius=12,
-                                    border_color=Purple,
-                                    border_width=1,
-                                    placeholder_text="Nome da transação",
-                                    font=("Poppins",24,"normal"),
-                                    text_color=Purple
-                                            )
-        addMoney.place(x=253,y=273)
-
-        saveMoneyadd = ctk.CTkButton(
-                                    master=money,
-                                    width=170,
-                                    height=40,
-                                    text="Continuar",
-                                    font=("Poppins",24,"normal"),
-                                    corner_radius=12,
-                                    border_color=Purple,
-                                    border_width=1,
-                                    text_color=Black,
-                                    hover_color=Purple,
-                                    text_color_disabled=Black,
-                                    fg_color=White,
-                                    bg_color=White,
-                                    command=PopUp
-                                    )
-        saveMoneyadd.place(x=340,y=346)
-
-        money.mainloop()
 
 def transações():
      transações = ctk.CTk()
      transações.geometry("850x500")
      transações.config(bg=White)
+     transações.resizable(False,False)
     
      mytransations = ctk.CTkLabel(
                                     master=transações,
@@ -227,15 +162,84 @@ def transações():
                                     fg_color=Purple
                                             )
      lineHorizontalTwo.place(x=696,y=251)
+     
 
      transações.mainloop()
+
+def dinheiro():
+        money = ctk.CTk()
+        money.geometry("850x500")
+        money.config(bg=White)
+        money.resizable(False,False)
+
+        nameUser = ctk.CTkLabel(
+                                    master=money,
+                                    width=260,
+                                    height=29,
+                                    text='Olá Rodriggo',
+                                    font=('Poppins',40,'normal'),
+                                    text_color=Purple,
+                                    fg_color=White,
+                                    bg_color=White
+                                            )
+        nameUser.place(x=295,y=100)
+
+        addMoney = ctk.CTkEntry(
+                                    master=money,
+                                    width=344,
+                                    height=51,
+                                    fg_color=White,
+                                    bg_color=White,
+                                    corner_radius=12,
+                                    border_color=Purple,
+                                    border_width=1,
+                                    placeholder_text="R$   Adicione um saldo...",
+                                    font=("Poppins",24,"normal"),
+                                    text_color=Purple
+                                            )
+        addMoney.place(x=253,y=199)
+
+        addMoney = ctk.CTkEntry(
+                                    master=money,
+                                    width=344,
+                                    height=51,
+                                    fg_color=White,
+                                    bg_color=White,
+                                    corner_radius=12,
+                                    border_color=Purple,
+                                    border_width=1,
+                                    placeholder_text="Nome da transação",
+                                    font=("Poppins",24,"normal"),
+                                    text_color=Purple
+                                            )
+        addMoney.place(x=253,y=273)
+
+        saveMoneyadd = ctk.CTkButton(
+                                    master=money,
+                                    width=170,
+                                    height=40,
+                                    text="Continuar",
+                                    font=("Poppins",24,"normal"),
+                                    corner_radius=12,
+                                    border_color=Purple,
+                                    border_width=1,
+                                    text_color=Black,
+                                    hover_color=Purple,
+                                    text_color_disabled=Black,
+                                    fg_color=White,
+                                    bg_color=White,
+                                    command=PopUp
+                                    )
+        saveMoneyadd.place(x=340,y=346)
+
+        money.mainloop()
 
 def PopUp():
         textinpopUp = "Savo com sucesso"
         savetela = ctk.CTk()
         savetela.geometry("400x199")
         savetela.config(bg=White)
-        savetela.resizable(False,False)
+        savetela.resizable(True,True)
         savetela.title("Salvo") 
 
 
@@ -275,7 +279,7 @@ def Dashboard():
     Mydashboard.config(bg=White)
     Mydashboard.resizable(True,True)
     Mydashboard.title('Dashboard')
-    Mydashboard.attributes("-fullscreen",True)
+    Mydashboard.attributes("-fullscreen",False)
 
 
 
