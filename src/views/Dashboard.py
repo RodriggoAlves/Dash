@@ -3,6 +3,8 @@ from tkinter import*
 from datetime import datetime as dt
 import time
 import webbrowser
+from PopUp import PopUp
+
 
 # Cores Padrçoes Utilizadas 
 
@@ -11,269 +13,9 @@ Black = '#000000'
 Purple = '#4200FF'
 Purplehover = '#4C22A5'
 macos = "#D1CDD1"
-# Teste
 
 
-def transações():
-     transações = ctk.CTk()
-     transações.geometry("850x500")
-     transações.config(bg=White)
-     transações.resizable(False,False)
-    
-     mytransations = ctk.CTkLabel(
-                                    master=transações,
-                                    text='R$ 700,80',
-                                    text_color=Purple,
-                                    font=("Poppins",50,"normal"),
-                                    fg_color=White
-                                            )
-     mytransations.place(x=305,y=58)
-
-     buttonaddvalor = ctk.CTkButton(
-                                    master=transações,
-                                    width=224,
-                                    height=44,
-                                    text='+ Adicionar valor',
-                                    font=("Poppins",20,"normal"),
-                                    text_color=Purple,
-                                    bg_color=White,
-                                    fg_color=White,
-                                    hover_color="#9B6EFB",
-                                    corner_radius=30,
-                                    border_color=Purple,
-                                    border_width=2,
-                                    command=dinheiro
-                                            )
-     buttonaddvalor.place(x=313,y=162)
-
-     linesOne = ctk.CTkFrame(
-                                    master=transações,
-                                    width=764,
-                                    height=194,
-                                    fg_color=White,
-                                    bg_color=White,
-                                    border_width=2,
-                                    border_color=Purple
-                                            )
-     linesOne.place(x=43,y=249)
-
-     textoId = ctk.CTkLabel(
-                                    master=transações,
-                                    text="ID",
-                                    fg_color=White,
-                                    bg_color=White,
-                                    text_color=Black,
-                                    font=("Poppins",18,"normal")
-                                            )
-     textoId.place(x=88,y=251)
-
-     textTransation = ctk.CTkLabel(
-                                    master=transações,
-                                    text="Nome da transação",
-                                    fg_color=White,
-                                    bg_color=White,
-                                    text_color=Black,
-                                    font=("Poppins",18,"normal")
-                                            )
-     textTransation.place(x=333,y=251)    
-
-     textData = ctk.CTkLabel(
-                                    master=transações,
-                                    text="Data",
-                                    fg_color=White,
-                                    bg_color=White,
-                                    text_color=Black,
-                                    font=("Poppins",18,"normal")
-                                            )
-     textData.place(x=730,y=251)   
-
-     linesTwo = ctk.CTkFrame(
-                                    master=transações,
-                                    width=760,
-                                    height=2,
-                                    fg_color=Purple,
-                                    bg_color=White,
-                                            )
-     linesTwo.place(x=45,y=276)
-
-     linesTree = ctk.CTkFrame(
-                                    master=transações,
-                                    width=760,
-                                    height=2,
-                                    fg_color=Purple,
-                                    bg_color=White,
-                                            )
-     linesTree.place(x=45,y=304)  
-
-     linesFor = ctk.CTkFrame(
-                                    master=transações,
-                                    width=760,height=2,
-                                    fg_color=Purple,
-                                    bg_color=White,
-                                            )
-     linesFor.place(x=45,y=332)  
-     
-     linesfive = ctk.CTkFrame(
-                                    master=transações,
-                                    width=760,height=2,
-                                    fg_color=Purple,
-                                    bg_color=White,
-                                            )
-     linesfive.place(x=45,y=304)  
-
-     linessix = ctk.CTkFrame(
-                                    master=transações,
-                                    width=760,
-                                    height=2,
-                                    fg_color=Purple,
-                                    bg_color=White,
-                                            )
-     linessix.place(x=45,y=360) 
-
-     linesseven = ctk.CTkFrame(
-                                    master=transações,
-                                    width=760,height=2,
-                                    fg_color=Purple,
-                                    bg_color=White,
-                                            )
-     linesseven.place(x=45,y=388) 
-
-     linesEight = ctk.CTkFrame(
-                                    master=transações,
-                                    width=760,height=2,
-                                    fg_color=Purple,
-                                    bg_color=White,
-                                            )
-     linesEight.place(x=45,y=416) 
-
-     lineHorizontalOne = ctk.CTkFrame(
-                                    master=transações,
-                                    width=2,height=190,
-                                    bg_color=Purple,
-                                    fg_color=Purple
-                                            )
-     lineHorizontalOne.place(x=152,y=251)
-
-     lineHorizontalTwo = ctk.CTkFrame(
-                                    master=transações,
-                                    width=2,
-                                    height=190,
-                                    bg_color=Purple,
-                                    fg_color=Purple
-                                            )
-     lineHorizontalTwo.place(x=696,y=251)
-     
-
-     transações.mainloop()
-
-def dinheiro():
-        money = ctk.CTk()
-        money.geometry("850x500")
-        money.config(bg=White)
-        money.resizable(False,False)
-
-        nameUser = ctk.CTkLabel(
-                                    master=money,
-                                    width=260,
-                                    height=29,
-                                    text='Olá Rodriggo',
-                                    font=('Poppins',40,'normal'),
-                                    text_color=Purple,
-                                    fg_color=White,
-                                    bg_color=White
-                                            )
-        nameUser.place(x=295,y=100)
-
-        addMoney = ctk.CTkEntry(
-                                    master=money,
-                                    width=344,
-                                    height=51,
-                                    fg_color=White,
-                                    bg_color=White,
-                                    corner_radius=12,
-                                    border_color=Purple,
-                                    border_width=1,
-                                    placeholder_text="R$   Adicione um saldo...",
-                                    font=("Poppins",24,"normal"),
-                                    text_color=Purple
-                                            )
-        addMoney.place(x=253,y=199)
-
-        addMoney = ctk.CTkEntry(
-                                    master=money,
-                                    width=344,
-                                    height=51,
-                                    fg_color=White,
-                                    bg_color=White,
-                                    corner_radius=12,
-                                    border_color=Purple,
-                                    border_width=1,
-                                    placeholder_text="Nome da transação",
-                                    font=("Poppins",24,"normal"),
-                                    text_color=Purple
-                                            )
-        addMoney.place(x=253,y=273)
-
-        saveMoneyadd = ctk.CTkButton(
-                                    master=money,
-                                    width=170,
-                                    height=40,
-                                    text="Continuar",
-                                    font=("Poppins",24,"normal"),
-                                    corner_radius=12,
-                                    border_color=Purple,
-                                    border_width=1,
-                                    text_color=Black,
-                                    hover_color=Purple,
-                                    text_color_disabled=Black,
-                                    fg_color=White,
-                                    bg_color=White,
-                                    command=PopUp
-                                    )
-        saveMoneyadd.place(x=340,y=346)
-
-        money.mainloop()
-
-def PopUp():
-        textinpopUp = "Savo com sucesso"
-        savetela = ctk.CTk()
-        savetela.geometry("400x199")
-        savetela.config(bg=White)
-        savetela.resizable(True,True)
-        savetela.title("Salvo") 
-
-
-        textSave = ctk.CTkLabel(
-                                    master=savetela,
-                                    width=156,
-                                    height=21,
-                                    fg_color=White,
-                                    bg_color=White,
-                                    text=textinpopUp,
-                                    text_color=Purple,
-                                    font=("poppins",21,"normal")
-                                           )
-        textSave.place(x=115,y=52)
-
-        buttonOk = ctk.CTkButton(
-                                    master=savetela,
-                                    width=109,
-                                    height=24,
-                                    fg_color=White,
-                                    bg_color=White,
-                                    text="Ok",
-                                    text_color=Black,
-                                    corner_radius=30,
-                                    border_color=Purple,
-                                    border_width=1,
-                                    hover_color=Purplehover
-                                            )
-        buttonOk.place(x=145,y=120)
-
-
-        savetela.mainloop() 
-
-def Dashboard():
+def DashboardTela(Tela):
     Mydashboard = ctk.CTk()
     Mydashboard.geometry('1360x768')
     Mydashboard.config(bg=White)
@@ -335,6 +77,7 @@ def Dashboard():
         MensagemSair.place(x=116,y=48)
 
         # Botão para confirmar se quer sair 
+
 
         def Close():
             Mydashboard.destroy()
@@ -425,8 +168,8 @@ def Dashboard():
                                     corner_radius=12,
                                     border_color=Black,
                                     border_width=2,
-                                    command=transações,
-                                    hover=White
+                                    hover=White,
+                                    command=Tela
                                             )
     ButtonEconomy.place(x=445,y=123)
 
@@ -639,8 +382,7 @@ def Dashboard():
                                             )
     Leituralabel.place(x=1120,y=361)
 
+
     Mydashboard.mainloop()
 
-
-Dashboard()
 
