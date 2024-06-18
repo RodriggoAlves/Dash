@@ -1,6 +1,5 @@
-from Dashboard import *
+from Dashboard import*
 from Transacoes import *
 from login import*
 
-TelaDeLogin()
-
+DashboardTela()

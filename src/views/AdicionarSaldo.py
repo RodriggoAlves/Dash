@@ -1,5 +1,7 @@
 import customtkinter as ctk
 from PopUp import*
+from ConfirmarSenha import*
+
 
 White = '#ffffff'
 Black = '#000000'
@@ -13,7 +15,9 @@ def AdicionarSaldo():
         money = ctk.CTk()
         money.geometry("850x500")
         money.config(bg=White)
+        money.title("Adicionar Transação")
         money.resizable(False,False)
+        money.iconbitmap("image/DashboardIcon.ico")
 
         nameUser = ctk.CTkLabel(
                                     master=money,
@@ -27,7 +31,7 @@ def AdicionarSaldo():
                                             )
         nameUser.place(x=295,y=100)
 
-        addMoney = ctk.CTkEntry(
+        NomeDaTransacao = ctk.CTkEntry(
                                     master=money,
                                     width=344,
                                     height=51,
@@ -40,7 +44,7 @@ def AdicionarSaldo():
                                     font=("Poppins",24,"normal"),
                                     text_color=Purple
                                             )
-        addMoney.place(x=253,y=199)
+        NomeDaTransacao.place(x=253,y=199)
 
         addMoney = ctk.CTkEntry(
                                     master=money,
@@ -71,9 +75,8 @@ def AdicionarSaldo():
                                     text_color_disabled=Black,
                                     fg_color=White,
                                     bg_color=White,
-                                    command=PopUp
+                                    command=ConfirmarSenha
                                     )
         saveMoneyadd.place(x=340,y=346)
 
         money.mainloop()
-

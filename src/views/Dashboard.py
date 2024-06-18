@@ -4,6 +4,7 @@ from datetime import datetime as dt
 import time
 import webbrowser
 from PopUp import PopUp
+from AdicionarSaldo import AdicionarSaldo
 
 
 # Cores Padrçoes Utilizadas 
@@ -15,12 +16,13 @@ Purplehover = '#4C22A5'
 macos = "#D1CDD1"
 
 
-def DashboardTela(Tela):
+def DashboardTela():
     Mydashboard = ctk.CTk()
     Mydashboard.geometry('1360x768')
     Mydashboard.config(bg=White)
     Mydashboard.resizable(True,True)
     Mydashboard.title('Dashboard')
+    Mydashboard.iconbitmap("image/DashboardIcon.ico")
     Mydashboard.attributes("-fullscreen",False)
 
 
@@ -56,7 +58,6 @@ def DashboardTela(Tela):
     # Botão no final de sair 
 
     # Imagem de Log Out
-    ButtonLogOutImage = PhotoImage(file='Image/LogOutImage.png')
     
     #Função de sair do Dashboard
     def LogOut():
@@ -130,7 +131,6 @@ def DashboardTela(Tela):
                                     height=42,
                                     bg_color=Purple,
                                     fg_color=Purple,
-                                    image=ButtonLogOutImage,
                                     text='',
                                     hover_color=Purplehover,
                                     command=LogOut
@@ -162,14 +162,14 @@ def DashboardTela(Tela):
                                     height=58,
                                     fg_color=White,
                                     bg_color=White,
-                                    text='$   689,00',
+                                    text='$690,00',
                                     text_color=Black,
                                     font=('Poppins',25,'bold'),
                                     corner_radius=12,
                                     border_color=Black,
                                     border_width=2,
                                     hover=White,
-                                    command=Tela
+                                    command=AdicionarSaldo
                                             )
     ButtonEconomy.place(x=445,y=123)
 
@@ -384,5 +384,3 @@ def DashboardTela(Tela):
 
 
     Mydashboard.mainloop()
-
-
